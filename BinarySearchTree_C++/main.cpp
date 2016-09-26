@@ -57,6 +57,7 @@ void Insert(BiTNode **T,int x)
         *T = pInsert;
     }
 
+    // 当前节点的左子树为空，并且值小于根节点值
     if ((*T)->lChild == NULL && x < (*T)->data)
     {
         (*T)->lChild = pInsert;
@@ -67,7 +68,8 @@ void Insert(BiTNode **T,int x)
         (*T)->rChild = pInsert;
     }
 
-    //递归实现
+    // 递归实现
+    // 没有找到合适的节点，继续在左子树查找
     if (x < (*T)->data)
     {
         Insert(&(*T)->lChild, x);
