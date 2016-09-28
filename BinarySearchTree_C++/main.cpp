@@ -117,11 +117,11 @@ void PreOrder(BiTNode *T)
 
 //查找某一个值
 //返回1表示找到该值，返回0表示没有找到
-BiTNode *SearchValue(BiTNode *T,int x)
+void SearchValue(BiTNode *T,int x)
 {
     if (T == NULL)
     {
-        return 0;
+        return;
     }
     else
     {
@@ -139,11 +139,11 @@ BiTNode *SearchValue(BiTNode *T,int x)
         {
             //找到该值
             cout << "该值的内存地址为：" << T << endl;
-            return T;
+            return;
         }
     }
 
-    return NULL;
+    return;
 }
 
 int main(int argc, const char * argv[])
