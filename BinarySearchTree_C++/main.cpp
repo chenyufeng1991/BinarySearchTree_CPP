@@ -47,7 +47,7 @@ int CreateBinarySearchTree(BiTNode **T)
 void Insert(BiTNode **T,int x)
 {
     //这里创建一个要插入的节点
-    BiTNode *pInsert = (BiTNode *)malloc(sizeof(BiTNode));
+    BiTNode *pInsert = new BiTNode;
     pInsert->data = x;
     pInsert->lChild = NULL;
     pInsert->rChild = NULL;
