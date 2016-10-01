@@ -55,17 +55,20 @@ void Insert(BiTNode **T,int x)
     if ((*T) == NULL)
     {
         *T = pInsert;
+        return;
     }
 
     // 当前节点的左子树为空，并且值小于根节点值
     if ((*T)->lChild == NULL && x < (*T)->data)
     {
         (*T)->lChild = pInsert;
+        return;
     }
 
     if ((*T)->rChild == NULL && x > (*T)->data)
     {
         (*T)->rChild = pInsert;
+        return;
     }
 
     // 递归实现
