@@ -17,7 +17,7 @@ typedef struct BTNode{
 }BiTNode;
 
 //声明
-int CreateBinarySearchTree(BiTNode **T);
+void CreateBinarySearchTree(BiTNode **T);
 void Insert(BiTNode **T,int x);
 void MiddleOrder(BiTNode *T);
 void PreOrder(BiTNode *T);
@@ -26,7 +26,7 @@ void PreOrder(BiTNode *T);
 /**
  *  输入-1时创建结束,其实是一个不断插入的过程
  */
-int CreateBinarySearchTree(BiTNode **T)
+void CreateBinarySearchTree(BiTNode **T)
 {
     cout << "请输入创建二叉查找树的数字序列：" << endl;
 
@@ -40,7 +40,7 @@ int CreateBinarySearchTree(BiTNode **T)
     }
 
     cout << "二叉查找树创建成功" << endl;
-    return 1;
+    return;
 }
 
 //插入节点
